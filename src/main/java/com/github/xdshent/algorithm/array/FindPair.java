@@ -1,4 +1,4 @@
-package com.github.xdshent.array;
+package com.github.xdshent.algorithm.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
