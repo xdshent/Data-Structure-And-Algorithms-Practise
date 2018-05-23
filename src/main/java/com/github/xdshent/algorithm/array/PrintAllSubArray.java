@@ -23,9 +23,11 @@ public class PrintAllSubArray {
      * The time complexity of naive solution is O(N^3) as there N^2 sub-arrays and it takes O(N) time to find sum of its elements.
      * The method can be optimized to run in O(N^2) time by calculating sub-array sum in constant time.
      *
+     * time complexity: O(N^2)
+     * auxiliary space used: O(1)
      * @param array
      */
-    public static void printAllSubarrays1(int[] array) {
+    public static void printAllSubArrays1(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int sum = 0;
             for (int j = i; j < array.length; j++) {
@@ -45,6 +47,9 @@ public class PrintAllSubArray {
      * The idea is to create an empty multimap to store ending index of all sub-arrays having given sum.
      * We traverse the given array, and maintain sum of elements seen so far. If sum is seen before,
      * there exists at-least one sub-array with 0 sum which ends at current index and we print all such sub-arrays.
+     *
+     * time complexity: O(N)
+     * auxiliary space used: O(N)
      *
      * @param array
      */
