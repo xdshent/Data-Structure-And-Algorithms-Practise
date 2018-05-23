@@ -43,7 +43,7 @@ public class ZeroSumSubarray {
 
             if (set.contains(sum)) {
                 return true;
-            }//1 3 -3 -1 3
+            }
 
             set.add(sum);
         }
