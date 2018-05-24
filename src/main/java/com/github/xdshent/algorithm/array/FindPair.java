@@ -31,7 +31,7 @@ public class FindPair {
      */
     public static void findPair1(int[] array, int sum) {
         for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 1; j < array.length; j++) {
+            for (int j = i + 1; j < array.length; j++) {
                 if (array[i] + array[j] == sum) {
                     System.out.printf("Pair found at index %d and %d \n", i, j);
                     return;
