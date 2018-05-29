@@ -77,6 +77,9 @@ public class Equilibrium {
      * Sum of left sub-array array[0..i-1] = total - (array[i] + sum of
      * right sub-array array[i+1..n-1])
      *
+     * time complexity: O(N)
+     * auxiliary space used: O(1)
+     *
      * @param array
      */
     public static void equilibriumIndex2(int[] array) {
