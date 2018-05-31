@@ -11,3 +11,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Shuffle a given array of elements(Fisher-Yates shuffle)](/src/main/java/com/github/xdshent/algorithm/array/Shuffle.java)
  * [Find equilibrium index of an array](/src/main/java/com/github/xdshent/algorithm/array/Equilibrium.java)
  * [Find majority element in an array (Boyer–Moore majority vote algorithm)](/src/main/java/com/github/xdshent/algorithm/array/MajorityElement.java)
+ * [Move all zeros present in the array to the end](/src/main/java/com/github/xdshent/algorithm/array/MoveZeroToTheEnd.java)
