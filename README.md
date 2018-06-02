@@ -13,3 +13,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find majority element in an array (Boyer–Moore majority vote algorithm)](/src/main/java/com/github/xdshent/algorithm/array/MajorityElement.java)
  * [Move all zeros present in the array to the end](/src/main/java/com/github/xdshent/algorithm/array/MoveZerosToTheEnd.java)
  * [Inplace merge two sorted arrays](/src/main/java/com/github/xdshent/algorithm/array/Merge.java)
+ * [Find maximum length sub-array having given sum](/src/main/java/com/github/xdshent/algorithm/array/MaxLengthSubArray.java)
