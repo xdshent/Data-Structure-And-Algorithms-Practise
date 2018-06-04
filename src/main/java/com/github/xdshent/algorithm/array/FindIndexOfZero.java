@@ -23,9 +23,10 @@ public class FindIndexOfZero {
     /**
      * Find index of 0 to replaced with 1 to get maximum sequence
      * of continuous 1's
-     *
+     * <p>
      * time complexity: O(N)
      * auxiliary space used: O(1)
+     *
      * @param array
      */
     public static int findIndexOfZero(int[] array) {
