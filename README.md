@@ -18,3 +18,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find index of 0 to replaced to get maximum length sequence of continuous ones](/src/main/java/com/github/xdshent/algorithm/array/FindIndexOfZero.java)
  * [Find maximum product of two integers in an array](/src/main/java/com/github/xdshent/algorithm/array/FindMaximumProduct.java)
  * [Replace each element of the array with product of every other element without using division operator](/src/main/java/com/github/xdshent/algorithm/array/CalculateProduct.java)
+ * [Find a duplicate element in a limited range array](/src/main/java/com/github/xdshent/algorithm/array/FindDuplicate.java)
