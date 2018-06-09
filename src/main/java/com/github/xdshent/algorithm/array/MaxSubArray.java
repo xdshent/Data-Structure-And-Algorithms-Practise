@@ -25,4 +25,59 @@ package com.github.xdshent.algorithm.array;
  * visited array.
  */
 public class MaxSubArray {
+
+    /**
+     * time complexity: O(N^3)
+     * auxiliary space used: O(N)
+     *
+     * @param array
+     */
+    public static void findMaxSubArray(int[] array) {
+        int len = 1;
+        int start = 0, end = 0;
+
+        //consider each sub-array formed by array[i..j]
+        for (int i = 0; i < array.length - 1; i++) {
+            int minValue = array[i], maxValue = array[i];
+
+            for (int j = i + 1; j < array.length; j++) {
+                minValue = Math.min(minValue, array[j]);
+                maxValue = Math.max(maxValue, array[j]);
+
+                if (isConsecutive(array, i, j, minValue, maxValue)) {
+                    if (len < maxValue - minValue + 1) {
+                        len = maxValue - minValue + 1;
+                        start = i;
+                        end = j;
+                    }
+                }
+            }
+        }
+        System.out.println("The largest sub-array is[" + start + ", " + end + "]");
+    }
+
+    private static boolean isConsecutive(int[] array, int i, int j, int minValue, int maxValue) {
+
+        //in order for an array to contain consecutive integers, the
+        // difference between maximum and minimum element in it should be
+        // exactly j-i
+        if (maxValue - minValue != j - i) {
+            return false;
+        }
+        boolean[] visited = new boolean[j - i + 1];
+
+        //traverse the sub-array and checks if each element appears only once
+        for (int k = i; k <= j; k++) {
+            //if element is seen before, return false
+            if (visited[array[k] - minValue]) {
+                return false;
+            }
+
+            //mark element as seen
+            visited[array[k] - minValue] = true;
+        }
+
+        //we reach here when all elements in array are distinct
+        return true;
+    }
 }
