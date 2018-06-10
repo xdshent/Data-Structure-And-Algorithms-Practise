@@ -82,12 +82,12 @@ public class BitonicSubArray {
         while (i + 1 < array.length) {
             int len = 1;
 
-            while (i + 1 < array.length && array[i] < array[i + 1]) {
+            while (i + 1 < array.length && array[i] <= array[i + 1]) {
                 i++;
                 len++;
             }
 
-            while (i + 1 < array.length && array[i] > array[i + 1]) {
+            while (i + 1 < array.length && array[i] >= array[i + 1]) {
                 i++;
                 len++;
             }
