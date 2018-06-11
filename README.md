@@ -20,4 +20,5 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Replace each element of the array with product of every other element without using division operator](/src/main/java/com/github/xdshent/algorithm/array/CalculateProduct.java)
  * [Find a duplicate element in a limited range array](/src/main/java/com/github/xdshent/algorithm/array/FindDuplicate.java)
  * [Find largest sub-array formed by consecutive integers](/src/main/java/com/github/xdshent/algorithm/array/MaxSubArray.java)
- * [Find longest bitonic sub-array in an array](/src/main/java/com/github/xdshent/algorithm/array/BitonicSubArray.java) 
+ * [Find longest bitonic sub-array in an array](/src/main/java/com/github/xdshent/algorithm/array/BitonicSubArray.java)
+ * [Find maximum difference between two elements in the array by satisfying given constraints](/src/main/java/com/github/xdshent/algorithm/array/MaximumDifference.java)
