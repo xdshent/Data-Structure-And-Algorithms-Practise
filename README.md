@@ -22,4 +22,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find largest sub-array formed by consecutive integers](/src/main/java/com/github/xdshent/algorithm/array/MaxSubArray.java)
  * [Find longest bitonic sub-array in an array](/src/main/java/com/github/xdshent/algorithm/array/BitonicSubArray.java)
  * [Find maximum difference between two elements in the array by satisfying given constraints](/src/main/java/com/github/xdshent/algorithm/array/MaximumDifference.java)
- *[Maximum sub-array problem(Kadane's algorithm)](/src/main/java/com/github/xdshent/algorithm/array/MaximumSubArray.java)
+ * [Maximum sub-array problem(Kadane's algorithm)](/src/main/java/com/github/xdshent/algorithm/array/MaximumSubArray.java)
