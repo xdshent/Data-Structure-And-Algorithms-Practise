@@ -46,7 +46,7 @@ public class KadaneAlgorithm {
             //update maximum sum of sub-array ending at index i
             maxEndingHere += array[i];
 
-            //if maximum sum is negative, set it to 0
+            //maximum sum is should be more than the current element
             if (maxEndingHere < array[i]) {
                 maxEndingHere = array[i];
                 beg = i;
