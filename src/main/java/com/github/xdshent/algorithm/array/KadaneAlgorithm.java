@@ -25,6 +25,8 @@ public class KadaneAlgorithm {
      * sub-array itself. We can easily modify the algorithm to keep track of
      * the starting and ending indices of the maximum sub-array.
      *
+     * time complexity: O(N)
+     * auxiliary space used: (1)
      * @param array
      */
     public static void kadane(int[] array) {
