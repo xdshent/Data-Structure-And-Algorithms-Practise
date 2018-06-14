@@ -31,10 +31,10 @@ public class KadaneAlgorithm {
      */
     public static void kadane(int[] array) {
         //stores maximum sum sub-array found so far
-        int maxSoFar = 0;
+        int maxSoFar = array[0];
 
         //stores maximum sum of sub-array ending at current position
-        int maxEndingHere = 0;
+        int maxEndingHere = array[0];
 
         //stores end-points of maximum sum sub-array found so far
         int start = 0, end = 0;
@@ -47,9 +47,9 @@ public class KadaneAlgorithm {
             maxEndingHere += array[i];
 
             //if maximum sum is negative, set it to 0
-            if (maxEndingHere < 0) {
-                maxEndingHere = 0;
-                beg = i + 1;
+            if (maxEndingHere < array[i]) {
+                maxEndingHere = array[i];
+                beg = i;
             }
 
             //update result if current sub-array sum is found to be greater
