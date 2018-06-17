@@ -27,6 +27,9 @@ package com.github.xdshent.algorithm.array;
  */
 public class DistinctCombinations {
     /**
+     * time complexity：O(2^N)
+     * auxiliary space used: O(N)
+     *
      * @param array
      * @param out
      * @param i
@@ -62,6 +65,8 @@ public class DistinctCombinations {
      * We can also process the elements of the array from right to
      * left. The idea is illustrated below:
      *
+     * time complexity: O(2^N)
+     * auxiliary space used: O(N)
      * @param array
      * @param out
      * @param n
