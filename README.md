@@ -25,3 +25,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Maximum sub-array problem(Kadane's algorithm)](/src/main/java/com/github/xdshent/algorithm/array/MaximumSubArray.java)
  * [Print continuous sub array with maximum sum](/src/main/java/com/github/xdshent/algorithm/array/KadaneAlgorithm.java)
  * [Maximum Sum Circular Sub Array](/src/main/java/com/github/xdshent/algorithm/array/MaxSumCirlularSubArray.java)
+ * [Find all distinct combinations of given length](/src/main/java/com/github/xdshent/algorithm/array/DistinctCombinations.java)
