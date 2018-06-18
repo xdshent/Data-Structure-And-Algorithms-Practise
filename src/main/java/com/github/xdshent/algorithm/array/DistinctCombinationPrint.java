@@ -42,7 +42,7 @@ public class DistinctCombinationPrint {
             return;
         }
 
-        for (int j = 0; j < n; j++) {
+        for (int j = i; j < n; j++) {
             //add current element array[j] to the solution and recurse
             // with same index j(as repeated elements are allowed in
             // combinations)
@@ -80,7 +80,7 @@ public class DistinctCombinationPrint {
 
         //start from previous element in the current combination till
         // last element
-        for (int j = 0; j < n; j++) {
+        for (int j = i; j < n; j++) {
             //add current element array[j] to the solution and recurse
             // with same index j (as repeated elements are allowed in
             // combinations)
