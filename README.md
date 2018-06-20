@@ -29,3 +29,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find all distinct combinations of given length with repetition allowed](/src/main/java/com/github/xdshent/algorithm/array/DistinctCombinationPrint.java)
  * [Find the maximum sequence of continuous 1's that can be formed by replacing at most k zeros by ones](/src/main/java/com/github/xdshent/algorithm/array/MaximumSequenceOfContinuousOne.java)
  * [Sliding window maximum](/src/main/java/com/github/xdshent/algorithm/array/SlidingWindowMaximum.java)
+ * [Find sub array having given sum in given array of integers](/src/main/java/com/github/xdshent/algorithm/array/SubArrayHavingGivenSum.java)
