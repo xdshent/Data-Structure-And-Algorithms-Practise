@@ -30,3 +30,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find the maximum sequence of continuous 1's that can be formed by replacing at most k zeros by ones](/src/main/java/com/github/xdshent/algorithm/array/MaximumSequenceOfContinuousOne.java)
  * [Sliding window maximum](/src/main/java/com/github/xdshent/algorithm/array/SlidingWindowMaximum.java)
  * [Find sub array having given sum in given array of integers](/src/main/java/com/github/xdshent/algorithm/array/SubArrayHavingGivenSum.java)
+ * [Find the length of smallest sub array whose sum of elements is greater than the given number](/src/main/java/com/github/xdshent/algorithm/array/SmallestSubArray.java)
