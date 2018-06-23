@@ -32,3 +32,4 @@ Data structure and algorithms practice in Java, will be continuously updated.
  * [Find sub array having given sum in given array of integers](/src/main/java/com/github/xdshent/algorithm/array/SubArrayHavingGivenSum.java)
  * [Find the length of smallest sub array whose sum of elements is greater than the given number](/src/main/java/com/github/xdshent/algorithm/array/SmallestSubArray.java)
  * [Find largest number possible from set of given numbers](/src/main/java/com/github/xdshent/algorithm/array/LargestNumberPossible.java)
+ * [Find smallest window in array sorting which will make entire array sorted](/src/main/java/com/github/xdshent/algorithm/array/SmallestWindow.java)
