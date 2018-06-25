@@ -35,3 +35,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find the length of smallest sub array whose sum of elements is greater than the given number](/src/main/java/com/github/xdshent/algorithm/array/SmallestSubArray.java)
  * [Find largest number possible from set of given numbers](/src/main/java/com/github/xdshent/algorithm/array/LargestNumberPossible.java)
  * [Find smallest window in array sorting which will make entire array sorted](/src/main/java/com/github/xdshent/algorithm/array/SmallestWindow.java)
+ * [Find maximum sum path involving elements of given arrays](/src/main/java/com/github/xdshent/algorithm/array/MaximumSumPath.java)
