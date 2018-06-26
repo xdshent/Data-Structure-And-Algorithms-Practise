@@ -36,3 +36,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find largest number possible from set of given numbers](/src/main/java/com/github/xdshent/algorithm/array/LargestNumberPossible.java)
  * [Find smallest window in array sorting which will make entire array sorted](/src/main/java/com/github/xdshent/algorithm/array/SmallestWindow.java)
  * [Find maximum sum path involving elements of given arrays](/src/main/java/com/github/xdshent/algorithm/array/MaximumSumPath.java)
+ * [Maximum profit earned by buying and selling shares any number of times](/src/main/java/com/github/xdshent/algorithm/array/MaximumProfit.java)
