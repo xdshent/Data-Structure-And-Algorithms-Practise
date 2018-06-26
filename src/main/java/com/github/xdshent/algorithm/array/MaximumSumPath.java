@@ -47,6 +47,7 @@ public class MaximumSumPath {
                 sumY += arrayY[j++];
             }
 
+            //if current element of Y is less than current element of X
             if (arrayY[j] < arrayX[i]) {
                 sumY += arrayY[j];
                 j++;
