@@ -71,4 +71,71 @@ package com.github.xdshent.algorithm.array;
  * the LIS.
  */
 public class LongestIncreasing {
+    /**
+     * time complexity: O(N^2)
+     * auxiliary space used: O(N)
+     *
+     * @param array
+     */
+    public static int findLISLength1(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
+
+        int[] c = new int[array.length];
+        c[0] = 1;
+        int maxLength = 1;
+
+        for (int i = 1; i < array.length; i++) {
+            int tmp = 1;
+            for (int j = 0; j < i; j++) {
+                if (array[i] > array[j]) {
+                    tmp = Math.max(c[j] + 1, tmp);
+                }
+            }
+            c[i] = tmp;
+            maxLength = Math.max(maxLength, c[i]);
+        }
+        return maxLength;
+    }
+
+    /**
+     * time complexity: O(Nlog(N))
+     * auxiliary space used: O(N)
+     * @param array
+     * @return
+     */
+    public static int findLISLength2(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        }
+
+        int[] b = new int[array.length + 1];
+        int end = 1;
+        b[end] = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > b[end]) {
+                end++;
+                b[end] = array[i];
+            } else {
+                int index = binarySearch(b, array[i], end);
+                b[index] = array[i];
+            }
+        }
+        return end;
+    }
+
+    private static int binarySearch(int[] b, int i, int end) {
+        int low = 0, high = end;
+        while (low <= high) {
+            int mid = low + (high - low) >> 1;
+            if (i > b[mid]) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return low;
+    }
 }
