@@ -48,6 +48,9 @@ public class MaximumProductSubArray {
      * ending at current position. Then we traverse the array once and for every index i in the array,
      * we update maximum and minimum product ending at array[i]. We update the result if maximum product
      * ending at any index if more than maximum product found so far.
+     * <p>
+     * time complexity: O(N)
+     * auxiliary space used: O(1)
      *
      * @param array
      * @return
