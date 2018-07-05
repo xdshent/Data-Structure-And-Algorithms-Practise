@@ -126,11 +126,11 @@ public class LongestIncreasing {
         return end;
     }
 
-    private static int binarySearch(int[] b, int i, int end) {
+    private static int binarySearch(int[] b, int key, int end) {
         int low = 0, high = end;
         while (low <= high) {
-            int mid = low + (high - low) >> 1;
-            if (i > b[mid]) {
+            int mid = low + ((high - low) >> 1);
+            if (key > b[mid]) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
