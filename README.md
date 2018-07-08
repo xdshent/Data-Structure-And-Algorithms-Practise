@@ -40,3 +40,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Trapping Rain Water within given set of bars](/src/main/java/com/github/xdshent/algorithm/array/TrappingRainWater.java)
  * [Longest Increasing Sub Sequence](/src/main/java/com/github/xdshent/algorithm/array/LongestIncreasing.java)
  * [Find maximum product sub array in a given array](/src/main/java/com/github/xdshent/algorithm/array/MaximumProductSubArray.java)
+ * [Find maximum sum of sub sequence with no adjacent elements](/src/main/java/com/github/xdshent/algorithm/array/MaximumSumOfSubSequence.java)
