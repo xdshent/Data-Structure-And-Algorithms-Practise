@@ -19,4 +19,35 @@ package com.github.xdshent.algorithm.array;
  * considered.
  */
 public class MaximumSumOfSubSequence {
+
+    /**
+     * time complexity: O(N)
+     * auxiliary space used: O(N)
+     *
+     * @param arr
+     * @param i
+     * @param n
+     * @param prev
+     * @return
+     */
+    public static int maxSumSubSeq(int[] arr, int i, int n, int prev) {
+
+        //base case: all elements are processed
+        if (i == n) {
+            return 0;
+        }
+
+        //recurse by excluding current element
+        int excl = maxSumSubSeq(arr, i + 1, n, prev);
+
+        int incl = 0;
+
+        //include current element only if it is not adjacent to previous element considered
+        if (prev + 1 != i) {
+            incl = maxSumSubSeq(arr, i + 1, n, i) + arr[i];
+        }
+
+        //return maximum sum we get by including or excluding current item
+        return Integer.max(incl, excl);
+    }
 }
