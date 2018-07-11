@@ -97,4 +97,20 @@ public class MaximumSumOfSubSequence {
         //return maximum sum
         return lookup[n - 1];
     }
+
+    /**
+     * Above solution uses extra space. We can also solve this problem
+     * without using any extra space. If we analyze the solution, we
+     * can see that maximum sum till any index i can be found by
+     * knowing the maximum sum of previous index i-1 and index i-2. So
+     * instead of sorting the complete array, we can maintain two
+     * variables that the maximum sum till previous index and previous
+     * to previous index.
+     *
+     * @param array
+     * @return
+     */
+    public static int maxSumSubSeq3(int[] array) {
+        return 0;
+    }
 }
