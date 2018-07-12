@@ -106,11 +106,33 @@ public class MaximumSumOfSubSequence {
      * instead of sorting the complete array, we can maintain two
      * variables that the maximum sum till previous index and previous
      * to previous index.
+     * <p>
+     * time complexity: O(N)
+     * auxiliary space used: O(1)
      *
      * @param array
      * @return
      */
     public static int maxSumSubSeq3(int[] array) {
-        return 0;
+        //base case
+        if (array.length == 0) {
+            return array[0];
+        }
+
+        //store maximum sum till index i-2
+        int prev_prev = array[0];
+
+        int prev = Integer.max(array[0], array[1]);
+
+        //start from index 2
+        for (int i = 2; i < array.length; i++) {
+            //curr stores the maximum sum till index i
+            int curr = Integer.max(array[i], Integer.max(prev, prev_prev + array[i]));
+            prev_prev = prev;
+            prev = curr;
+        }
+
+        //return maximum sum
+        return prev;
     }
 }
