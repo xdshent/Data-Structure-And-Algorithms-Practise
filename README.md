@@ -42,3 +42,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find maximum product sub array in a given array](/src/main/java/com/github/xdshent/algorithm/array/MaximumProductSubArray.java)
  * [Find maximum sum of sub sequence with no adjacent elements](/src/main/java/com/github/xdshent/algorithm/array/MaximumSumOfSubSequence.java)
  * [Decode the array constructed from another array](/src/main/java/com/github/xdshent/algorithm/array/DecodeTheArray.java)
+ * [Remove Nth Node From End of List](/src/main/java/com/github/xdshent/algorithm/array/RemoveNThNode.java)
