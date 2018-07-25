@@ -44,4 +44,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Decode the array constructed from another array](/src/main/java/com/github/xdshent/algorithm/array/DecodeTheArray.java)
  * [Remove Nth Node From End of List](/src/main/java/com/github/xdshent/algorithm/array/RemoveNThNode.java)
  * [Sorting an array using one swap](/src/main/java/com/github/xdshent/algorithm/array/SortAnArray.java)
- 
+ * [Find Triplet with given sum in an array](/src/main/java/com/github/xdshent/algorithm/array/FindTriplet.java) 
