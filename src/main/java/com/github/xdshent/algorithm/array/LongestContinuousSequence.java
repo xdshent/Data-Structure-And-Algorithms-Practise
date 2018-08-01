@@ -1,5 +1,8 @@
 package com.github.xdshent.algorithm.array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Length of longest continuous sequence with same sum in given binary arrays
  * <p>
@@ -42,5 +45,41 @@ package com.github.xdshent.algorithm.array;
  * X[i+1,j]-Y[i+1,j]=0 or X[i+1,j] == Y[i+1,j]
  */
 public class LongestContinuousSequence {
+    /**
+     * @param X
+     * @param Y
+     * @return
+     */
+    public static int findMaxSubArrayLength(int[] X, int[] Y) {
+        //create an empty map
+        Map<Integer, Integer> map = new HashMap<>();
 
+        //to handle the case when required sequence starts from index 0
+        map.put(0, -1);
+
+        //stores length of longest continuous sequence
+        int res = 0;
+
+        //sumX,sumY stores sum of elements of X[] and Y[] respectively till current index
+        int sumX = 0, sumY = 0;
+
+        //traverse both lists simultaneously
+        for (int i = 0; i < X.length; i++) {
+            //update sumX and sumY
+            sumX += X[i];
+            sumY += Y[i];
+
+            //calculate difference between sum of elements in two lists
+            int diff = sumX - sumY;
+
+            //if difference is seen for the first time, then store the difference and current index in a map
+            if (map.containsKey(diff)) {
+                map.put(diff, i);
+            } else {
+                //if difference is seen before, then update the result
+                res = Integer.max(res, i - map.get(diff));
+            }
+        }
+        return res;
+    }
 }
