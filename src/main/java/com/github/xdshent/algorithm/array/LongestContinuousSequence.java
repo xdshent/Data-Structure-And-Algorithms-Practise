@@ -46,6 +46,9 @@ import java.util.Map;
  */
 public class LongestContinuousSequence {
     /**
+     * time complexity: O(N)
+     * auxiliary space used: O(N)
+     *
      * @param X
      * @param Y
      * @return
