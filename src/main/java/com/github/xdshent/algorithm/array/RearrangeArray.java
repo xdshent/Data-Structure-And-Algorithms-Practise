@@ -67,7 +67,7 @@ public class RearrangeArray {
     public static void rearrange2(int[] array, int n) {
         //for each element array[i] increment value present at index (array[i]%n) by i*n
         for (int i = 0; i < n; i++) {
-            array[array[i] % n] += i * n;
+            array[array[i] % n] = i * n;
         }
 
         //traverse the modified array and set array[i]=array[i]/n
