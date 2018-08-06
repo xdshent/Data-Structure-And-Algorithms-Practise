@@ -46,3 +46,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Sorting an array using one swap](/src/main/java/com/github/xdshent/algorithm/array/SortAnArray.java)
  * [Find Triplet with given sum in an array](/src/main/java/com/github/xdshent/algorithm/array/FindTriplet.java) 
  * [Length of longest continuous sequence with same sum in given binary array](/src/main/java/com/github/xdshent/algorithm/array/LongestContinuousSequence.java)
+ * [Rearrange array such that A[A[i]] is set to i for every element A[i]](/src/main/java/com/github/xdshent/algorithm/array/RearrangeArray.java)
