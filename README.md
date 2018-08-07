@@ -47,3 +47,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find Triplet with given sum in an array](/src/main/java/com/github/xdshent/algorithm/array/FindTriplet.java) 
  * [Length of longest continuous sequence with same sum in given binary array](/src/main/java/com/github/xdshent/algorithm/array/LongestContinuousSequence.java)
  * [Rearrange array such that A[A[i]] is set to i for every element A[i]](/src/main/java/com/github/xdshent/algorithm/array/RearrangeArray.java)
+ * [Reverse every consecutive m elements of the given sub array](/src/main/java/com/github/xdshent/algorithm/array/ReverseEveryConsecutiveMElements.java)
