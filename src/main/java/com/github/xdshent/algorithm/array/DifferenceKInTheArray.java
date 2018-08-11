@@ -82,4 +82,77 @@ public class DifferenceKInTheArray {
             set.add(array[i]);
         }
     }
+
+    /**
+     * we can avoid using extra space by performing binary search for element(array[i]-diff) or
+     * (array[i]+diff) in stead of using hashing
+     * <p>
+     * time complexity: O(NlogN)
+     * auxiliary space used: O(1)
+     *
+     * @param array
+     * @param diff
+     */
+    public static void findPair3(int[] array, int diff) {
+        //sort array in ascending order
+        Arrays.sort(array);
+
+        for (int i = 0; i < array.length; i++) {
+            //to avoid printing duplicates (skip adjacent duplicates)
+            while (i < array.length - 1 && array[i] == array[i + 1]) {
+                i++;
+            }
+
+            //perform binary search for element (array[i]-diff)
+            if (Arrays.binarySearch(array, array[i] - diff) > 0) {
+                System.out.println("(" + array[i] + "," + (array[i] - diff) + ")");
+            }
+        }
+    }
+
+    /**
+     * The idea is somewhat similar to findign pair with given sum in the array.But instead of
+     * starting from two end-points of the array, we start from begining of the sorted array.
+     * <p>
+     * time complexity: O(NlogN)
+     * auxiliary space used: O(N)
+     *
+     * @param array
+     * @param diff
+     */
+    public static void findPair4(int[] array, int diff) {
+        //sort array in ascending in the array
+        Arrays.sort(array);
+
+        //maintain two indicates in the array
+        int i = 0, j = 0;
+        int n = array.length;
+
+        while (i < n && j < n) {
+            //to avoid printing duplicate
+            while (i < n - 1 && array[i] == array[i + 1]) {
+                i++;
+            }
+
+            while (j < n - 1 && array[j] == array[j + 1]) {
+                j++;
+            }
+
+            //increasing i if current difference is more than the desired difference
+            if (array[j] - array[i] > diff) {
+                i++;
+            }
+            //increasing j if current difference is less than the desired difference
+            else if (array[j] - array[i] < diff) {
+                j++;
+            }
+            //print the pair and increasing both i, j if current difference is same as the desired
+            // difference
+            else {
+                System.out.println("(" + array[j] + "," + array[i] + ")");
+                i++;
+                j++;
+            }
+        }
+    }
 }
