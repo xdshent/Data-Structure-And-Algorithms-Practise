@@ -115,7 +115,7 @@ public class DifferenceKInTheArray {
      * starting from two end-points of the array, we start from begining of the sorted array.
      * <p>
      * time complexity: O(NlogN)
-     * auxiliary space used: O(N)
+     * auxiliary space used: O(1)
      *
      * @param array
      * @param diff
