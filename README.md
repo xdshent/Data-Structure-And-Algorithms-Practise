@@ -50,3 +50,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Reverse every consecutive m elements of the given sub array](/src/main/java/com/github/xdshent/algorithm/array/ReverseEveryConsecutiveMElements.java)
  * [Maximum Product Subset Problem](/src/main/java/com/github/xdshent/algorithm/array/MaximumProductSubset.java)
  * [Find pairs with given difference k in the array](/src/main/java/com/github/xdshent/algorithm/array/DifferenceKInTheArray.java)
+ * [4 sum problem| Quadruplets with given sum](/src/main/java/com/github/xdshent/algorithm/array/FourSumProblem.java)
