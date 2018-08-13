@@ -1,11 +1,6 @@
 package com.github.xdshent.algorithm.array;
 
-import javafx.util.Pair;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 4 sum problem. Quadruplets with given sum.
@@ -101,6 +96,57 @@ public class FourSumProblem {
             }
         }
         return true;
+    }
+
+    /**
+     * Print all quadruplets with given sum
+     * <p>
+     * For example,
+     * Input:
+     * array = {2,7,4,0,9,5,1,3}
+     * sum=20
+     * <p>
+     * Output:
+     * Below are the quadruplets with sum 20
+     * {0,4,7,9}
+     * {1,3,7,9}
+     * {2,4,5,9}
+     * <p>
+     * We start by sorting the given array in ascending order and then for each pair (array[i],array[j]) in the array where (i<j),
+     * we check if a quadruplet is formed by current pair and a pair from sub-array array[j+1..n).
+     * Refer this post to find pairs with given sum in a sorted array in linear time.
+     *
+     * @param array
+     * @param sum
+     */
+    public static void quadTuple(int[] array, int sum) {
+        //sort the array in ascending order
+        Arrays.sort(array);
+
+        //check if Quadruplet is formed by array[i], array[j] and a pair
+        //from sub-array array[j+1..n]
+        for (int i = 0; i <= array.length - 4; i++) {
+            for (int j = i + 1; j <= array.length - 3; j++) {
+                //k stores remaining sum
+                int k = sum - (array[i] + array[j]);
+
+                //check for sum k in sub-array array[j+1..n]
+                int low = j + 1, high = array.length - 1;
+
+                while (low < high) {
+                    if (array[low] + array[high] < k) {
+                        low++;
+                    } else if (array[low] + array[high] > low) {
+                        high--;
+                    } else {
+                        //Quadruplet with given sum found
+                        System.out.println("(" + array[i] + "," + array[j] + "," + array[low] + "," + array[high]);
+                        low++;
+                        high--;
+                    }
+                }
+            }
+        }
     }
 
     static class Pair {
