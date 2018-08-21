@@ -23,15 +23,99 @@ import java.util.Random;
  * to O(N), with a worst case of O(N^2).
  */
 public class QuickSelectAlgorithm {
+
+    /**
+     *
+     * @param array
+     * @param left
+     * @param right
+     * @param k
+     * @return
+     */
+    public static int quickSelect1(int[] array, int left, int right, int k) {
+        while (true) {
+            if (left == right) {
+                return array[left];
+            }
+
+            int pivotIndex = left + rand(left, right);
+
+            pivotIndex = partition(array, left, right, pivotIndex);
+
+            if (k == pivotIndex) {
+                return array[k];
+            } else if (k < pivotIndex) {
+                right = pivotIndex - 1;
+            } else {
+                left = pivotIndex + 1;
+            }
+        }
+    }
+
+    /**
+     * @param array
+     * @param left
+     * @param right
+     * @param k
+     * @return
+     */
+    public static int quickSelect2(int[] array, int left, int right, int k) {
+
+        // if the array contains only one element, return that element
+        if (left == right) {
+            return array[left];
+        }
+
+        int pivotIndex = rand(left, right);
+
+        pivotIndex = partition(array, left, right, pivotIndex);
+
+        if (k == pivotIndex) {
+            return array[k];
+        } else if (k < pivotIndex) {
+            return quickSelect2(array, left, pivotIndex - 1, k);
+        } else {
+            return quickSelect2(array, pivotIndex + 1, right, k);
+        }
+    }
+
+
+    /**
+     * @param array
+     * @param left
+     * @param right
+     * @param pivotIndex
+     * @return
+     */
     //partition using Lomuto partition scheme
-    public static int partition(int[] array,int left,int right,int pivotIndex){
+    private static int partition(int[] array, int left, int right, int pivotIndex) {
         //pick pivotIndex as pivot from the array
         int pivot = array[pivotIndex];
 
         //move pivot to end
-        swap(array,pivotIndex,right);
-        return 0;
+        swap(array, pivotIndex, right);
+
+        int pIndex = left;
+        int i;
+
+        for (i = left; i < right; i++) {
+            if (array[i] <= pivot) {
+                swap(array, i, pIndex);
+                pIndex++;
+            }
+        }
+
+        swap(array, pIndex, right);
+
+        //return pIndex (index of pivot element)
+        return pIndex;
     }
+
+    /**
+     * @param min
+     * @param max
+     * @return
+     */
     private static int rand(int min, int max) {
         if (min > max || (max - min) > Integer.MAX_VALUE) {
             throw new IllegalArgumentException("Invalid value");
@@ -39,9 +123,14 @@ public class QuickSelectAlgorithm {
         return new Random().nextInt(max - min + 1) + min;
     }
 
-    private static void swap(int[] array,int i,int j){
+    /**
+     * @param array
+     * @param i
+     * @param j
+     */
+    private static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
-        array[j]=temp;
+        array[j] = temp;
     }
 }
