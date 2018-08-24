@@ -52,3 +52,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find pairs with given difference k in the array](/src/main/java/com/github/xdshent/algorithm/array/DifferenceKInTheArray.java)
  * [4 sum problem| Quadruplets with given sum](/src/main/java/com/github/xdshent/algorithm/array/FourSumProblem.java)
  * [Find minimum difference between index of two given elements present in the array](/src/main/java/com/github/xdshent/algorithm/array/MinDifferenceBetweenIndex.java)
+ * [Partition an array into two sub-array with the same sum](/src/main/java/com/github/xdshent/algorithm/array/PartitionAnArray.java)
