@@ -1,8 +1,6 @@
 package com.github.xdshent.algorithm.array;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Find count of distinct elements in every sub-array of size k
@@ -66,6 +64,52 @@ public class CountDistinctElements {
             distinct.addAll(list.subList(i, i + k));
 
             System.out.println("The count of distinct elements in the sub-array[" + i + ", " + (i + k - 1) + "] is " + distinct.size());
+        }
+    }
+
+    /**
+     * We can further reduce the time complexity to O(N) by using Sliding Window technique. The idea is to store frequency of elements
+     * in the current window in a mao and also keep track of count of distinct elements in current window(of size k). The optimization here
+     * is that we can derive count of elements in any window using the count of elements in the previous window by inserting the new element to
+     * the previous window from its right and removing an element from its left. This approach is shown below:
+     *
+     * @param array
+     * @param k
+     */
+    public static void findDistinctCount3(int[] array, int k) {
+        //map to store frequency of elements in current window of size k
+        Map<Integer, Integer> freq = new HashMap<>();
+
+        //maintains count of distinct elements in every sub-array of size k
+        int distinct = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (i >= k) {
+                //remove first element from the sub-array by reducing its
+                //frequency in the map
+                freq.putIfAbsent(array[i - k], 0);
+                freq.put(array[i - k], freq.get(array[i - k]) - 1);
+
+                //reduce distinct count if we're left with 0
+                if (freq.get(array[i - k]) == 0) {
+                    distinct--;
+                }
+
+                //add current element to the sub-array by incrementing its
+                //count in the map
+                freq.putIfAbsent(array[i], 0);
+                freq.putIfAbsent(array[i], freq.get(array[i]) + 1);
+
+                //increment distinct count by 1 if element occurs for the first time in current window
+                if (freq.get(array[array[i]]) == 1) {
+                    distinct++;
+                }
+
+                //print count of distinct elements in current sub-array
+                if (i >= k - 1) {
+                    System.out.println("The count of distinct elements in the sub-array [" + (i - k + 1) + ", " + i + "] " + "is " + distinct);
+                }
+            }
         }
     }
 }
