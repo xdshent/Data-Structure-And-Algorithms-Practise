@@ -54,3 +54,4 @@ Refer to [here](https://techiedelight.quora.com/500-Data-Structures-and-Algorith
  * [Find minimum difference between index of two given elements present in the array](/src/main/java/com/github/xdshent/algorithm/array/MinDifferenceBetweenIndex.java)
  * [Partition an array into two sub-array with the same sum](/src/main/java/com/github/xdshent/algorithm/array/PartitionAnArray.java)
  * [Find count of distinct elements in every sub-array of size k](/src/main/java/com/github/xdshent/algorithm/array/CountDistinctElements.java)
+ * [Find in partially sorted matrix](/src/main/java/com/github/xdshent/algorithm/array/FindInPartiallySortedMatrix.java)
