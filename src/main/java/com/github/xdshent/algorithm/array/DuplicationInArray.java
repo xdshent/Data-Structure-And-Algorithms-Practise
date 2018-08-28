@@ -2,6 +2,9 @@ package com.github.xdshent.algorithm.array;
 
 public class DuplicationInArray {
     /**
+     * time complexity: O(N)
+     * auxiliary space used: O(1)
+     *
      * @param array
      * @return
      */
@@ -32,6 +35,9 @@ public class DuplicationInArray {
     }
 
     /**
+     * time complexity: O(NlogN)
+     * auxiliary space used: O(1)
+     *
      * @param array
      * @return
      */
